@@ -4,6 +4,20 @@ import { MdLocationOn } from "react-icons/md";
 const Header = () => {
   const [destination, setDestination] = useState("");
   const [openOptions, setOpenOptions] = useState(false);
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  });
+
+  const handleOptions = (name, opration) => {
+    setOptions((prev) => {
+      return {
+        ...prev,
+        [name]: opration === "inc" ? options[name] + 1 : options[name] - 1,
+      };
+    });
+  };
   return (
     <div className="header">
       <div className="headerSearch">
@@ -27,9 +41,12 @@ const Header = () => {
         </div>
         <div className="headerSearchItem">
           <div id="optionDropDown" onClick={() => setOpenOptions(!openOptions)}>
-            1 adult &bull; 2 children &bull; 3 room
+            {options.adult} adult &bull; {options.children} children &bull;{" "}
+            {options.room} room
           </div>
-          {openOptions && <GuestOptionList />}
+          {openOptions && (
+            <GuestOptionList handleOptions={handleOptions} options={options} />
+          )}
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
@@ -44,20 +61,49 @@ const Header = () => {
 
 export default Header;
 
-function GuestOptionList() {
+function GuestOptionList({ options, handleOptions }) {
   return (
     <div className="guestOptions">
-      <div className="guestOptionItem">
-        <span className="optionText">Adult</span>
-        <div className="optionCounter">
-          <button className="optionCounterBtn">
-            <HiMinus className="icon" />
-          </button>
-          <span className="optionCounterNumber">2</span>
-          <button className="optionCounterBtn">
-            <HiPlus className="icon" />
-          </button>
-        </div>
+      <OptionItem
+        handleOptions={handleOptions}
+        type="adult"
+        options={options}
+        minLimit={1}
+      />
+      <OptionItem
+        handleOptions={handleOptions}
+        type="children"
+        options={options}
+        minLimit={0}
+      />
+      <OptionItem
+        handleOptions={handleOptions}
+        type="room"
+        options={options}
+        minLimit={1}
+      />
+    </div>
+  );
+}
+function OptionItem({ type, options, minLimit, handleOptions }) {
+  return (
+    <div className="guestOptionItem">
+      <span className="optionText">{type}</span>
+      <div className="optionCounter">
+        <button
+          onClick={() => handleOptions(type, "dec")}
+          className="optionCounterBtn"
+          disabled={options[type] <= minLimit}
+        >
+          <HiMinus className="icon" />
+        </button>
+        <span className="optionCounterNumber">{options[type]}</span>
+        <button
+          onClick={() => handleOptions(type, "inc")}
+          className="optionCounterBtn"
+        >
+          <HiPlus className="icon" />
+        </button>
       </div>
     </div>
   );
