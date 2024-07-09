@@ -1,6 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
 import { MdLocationOn } from "react-icons/md";
+import useOutsideClick from "../../Hooks/useOutsideClick";
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import { DateRange } from "react-date-range";
+import { format } from "date-fns";
+
 const Header = () => {
   const [destination, setDestination] = useState("");
   const [openOptions, setOpenOptions] = useState(false);
@@ -9,7 +15,14 @@ const Header = () => {
     children: 0,
     room: 1,
   });
-
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
+  const [openDate, setOpenDate] = useState(false);
   const handleOptions = (name, opration) => {
     setOptions((prev) => {
       return {
@@ -18,6 +31,9 @@ const Header = () => {
       };
     });
   };
+  const dateRef = useRef(null);
+  useOutsideClick(dateRef, "dateDropDown", () => setOpenDate(false));
+
   return (
     <div className="header">
       <div className="headerSearch">
@@ -36,7 +52,26 @@ const Header = () => {
         </div>
         <div className="headerSearchItem">
           <HiCalendar className="headerIcon dateIcon" />
-          <div className="dateDropDown">2023/06/23</div>
+          <div
+            ref={dateRef}
+            onClick={() => setOpenDate(!openDate)}
+            className="dateDropDown"
+            id="dateDropDown"
+          >
+            {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+              date[0].endDate,
+              "MM/dd/yyyy"
+            )}`}
+          </div>
+          {openDate && (
+            <DateRange
+              ranges={date}
+              onChange={(item) => setDate([item.selection])}
+              className="date"
+              minDate={new Date()}
+              moveRangeOnFirstSelection={true}
+            />
+          )}
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
@@ -45,7 +80,11 @@ const Header = () => {
             {options.room} room
           </div>
           {openOptions && (
-            <GuestOptionList handleOptions={handleOptions} options={options} />
+            <GuestOptionList
+              setOpenOptions={setOpenOptions}
+              handleOptions={handleOptions}
+              options={options}
+            />
           )}
           <span className="seperator"></span>
         </div>
@@ -61,9 +100,12 @@ const Header = () => {
 
 export default Header;
 
-function GuestOptionList({ options, handleOptions }) {
+function GuestOptionList({ options, handleOptions, setOpenOptions }) {
+  const optionRef = useRef();
+  useOutsideClick(optionRef, "optionDropDown", () => setOpenOptions(false));
+
   return (
-    <div className="guestOptions">
+    <div className="guestOptions" ref={optionRef}>
       <OptionItem
         handleOptions={handleOptions}
         type="adult"
