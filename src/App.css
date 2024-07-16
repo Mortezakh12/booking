@@ -284,7 +284,9 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.singleBookmark{
+  margin-bottom: 12px;
+}
 .bookmarkList .bookmarkItem.current-bookmark {
   border: 2px solid var(--primary-600);
   background-color: var(--text-100);

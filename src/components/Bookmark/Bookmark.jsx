@@ -3,13 +3,7 @@ import { useBookmarks } from "../Context/BookmarkListContext";
 import ReactCountryFlag from "react-country-flag";
 
 const Bookmark = () => {
-  const {
-    isLoading,
-    bookmarks,
-    getBookmark,
-    currentBookmark,
-    isLoadingCurrentBookmark,
-  } = useBookmarks();
+  const { isLoading, bookmarks, currentBookmark } = useBookmarks();
 
   if (isLoading) return <p>loading</p>;
   return (
@@ -22,7 +16,11 @@ const Bookmark = () => {
               key={item.id}
               to={`/bookmark/${item.id}?lat=${item.latitude}&lng=${item.longitude}`}
             >
-              <div className="bookmarkItem">
+              <div
+                className={`bookmarkItem ${
+                  item.id === currentBookmark.id ? "current-bookmark" : ""
+                }`}
+              >
                 <ReactCountryFlag svg countryCode={item.countryCode} /> &nbsp;
                 <strong>{item.cityName}</strong> &nbsp;
                 <span>{item.countryName}</span>
