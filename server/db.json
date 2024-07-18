@@ -1368,6 +1368,87 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "Amsterdam",
+      "country": "Netherlands (Kingdom of the)",
+      "countryCode": "NL",
+      "latitude": "52.35995535954076",
+      "longitude": "4.76608427145862",
+      "host_location": "Amsterdam Netherlands (Kingdom of the)",
+      "id": 9
+    },
+    {
+      "cityName": "Abalessa",
+      "country": "Algeria",
+      "countryCode": "DZ",
+      "latitude": "23.184804496742004",
+      "longitude": "3.7854202342853864",
+      "host_location": "Abalessa Algeria",
+      "id": 10
+    },
+    {
+      "cityName": "Marolles-en-Hurepoix",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "48.567140563269795",
+      "longitude": "2.2974735389376026",
+      "host_location": "Marolles-en-Hurepoix France",
+      "id": 11
+    },
+    {
+      "cityName": "Avrainville",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "48.5629271100888",
+      "longitude": "2.260563609004485",
+      "host_location": "Avrainville France",
+      "id": 12
+    },
+    {
+      "cityName": "Kortemark",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.00150739494193",
+      "longitude": "2.946525385453738",
+      "host_location": "Kortemark Belgium",
+      "id": 13
+    },
+    {
+      "cityName": "Diksmuide",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.00377258418483",
+      "longitude": "2.8714998101379012",
+      "host_location": "Diksmuide Belgium",
+      "id": 14
+    },
+    {
+      "cityName": "Diksmuide",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.00755852955927",
+      "longitude": "2.9039383125629223",
+      "host_location": "Diksmuide Belgium",
+      "id": 15
+    },
+    {
+      "cityName": "Kortemark",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.023660685141834",
+      "longitude": "2.9851256117271507",
+      "host_location": "Kortemark Belgium",
+      "id": 16
+    },
+    {
+      "cityName": "Lo-Reninge",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "50.95101754829708",
+      "longitude": "2.834076999064825",
+      "host_location": "Lo-Reninge Belgium",
+      "id": 18
     }
   ]
 }

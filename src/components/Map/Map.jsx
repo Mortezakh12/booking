@@ -10,15 +10,12 @@ import { useHotels } from "../Context/HotelsProvider";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import useGeoLocation from "../../Hooks/useGeoLocation";
+import useUrlLocation from "../../Hooks/useUrlLocation";
 
-export default function Map({markerLocations}) {
+export default function Map({ markerLocations }) {
   // const { isLoading, hotels } = useHotels();
   const [mapCenter, setMapCenter] = useState([51, 3]);
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
-
+  const [lat, lng] = useUrlLocation();
   const {
     isLoading: isLoadingPosition,
     position: geoLocationPosition,
@@ -69,7 +66,7 @@ function DetectClick() {
   const navigate = useNavigate();
   useMapEvent({
     click: (e) =>
-      navigate(`/bookmark?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+      navigate(`/bookmark/add?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
   return null;
 }
