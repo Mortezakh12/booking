@@ -1325,24 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
-      "id": 1
-    },
-    {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": 4
-    },
-    {
       "cityName": "Sanandaj",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1350,33 +1332,6 @@
       "longitude": "47.03114358752335",
       "host_location": "Sanandaj Iran (Islamic Republic of)",
       "id": 5
-    },
-    {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
-      "id": 7
-    },
-    {
-      "cityName": "Baba Kot",
-      "country": "Pakistan",
-      "countryCode": "PK",
-      "latitude": "28.43528783183169",
-      "longitude": "67.78003711374224",
-      "host_location": "Baba Kot Pakistan",
-      "id": 8
-    },
-    {
-      "cityName": "Amsterdam",
-      "country": "Netherlands (Kingdom of the)",
-      "countryCode": "NL",
-      "latitude": "52.35995535954076",
-      "longitude": "4.76608427145862",
-      "host_location": "Amsterdam Netherlands (Kingdom of the)",
-      "id": 9
     },
     {
       "cityName": "Abalessa",
@@ -1449,6 +1404,150 @@
       "longitude": "2.834076999064825",
       "host_location": "Lo-Reninge Belgium",
       "id": 18
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "latitude": "40.41705807798435",
+      "longitude": "-3.70488412447142",
+      "host_location": "Madrid Spain",
+      "id": 19
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "latitude": "40.444808773954044",
+      "longitude": "-3.755254228842198",
+      "host_location": "Madrid Spain",
+      "id": 21
+    },
+    {
+      "cityName": "Kinross",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "latitude": "56.200438069434476",
+      "longitude": "-3.4471260609924257",
+      "host_location": "Kinross United Kingdom of Great Britain and Northern Ireland (the)",
+      "id": 22
+    },
+    {
+      "cityName": "Asnieres-sur-Blour",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "46.13936920857399",
+      "longitude": "0.7277060607271314",
+      "host_location": "Asnieres-sur-Blour France",
+      "id": 24
+    },
+    {
+      "cityName": "Kortemark",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.011670359366036",
+      "longitude": "2.988283377522159",
+      "host_location": "Kortemark Belgium",
+      "id": 26
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "latitude": "40.43091673098771",
+      "longitude": "-3.7428249323853366",
+      "host_location": "Madrid Spain",
+      "id": 27
+    },
+    {
+      "cityName": "Hooglede",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.00151384315389",
+      "longitude": "3.029251688550501",
+      "host_location": "Hooglede Belgium",
+      "id": 29
+    },
+    {
+      "cityName": "Kortemark",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.020161514273894",
+      "longitude": "2.956948556191974",
+      "host_location": "Kortemark Belgium",
+      "id": 30
+    },
+    {
+      "cityName": "Houthulst",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "50.99864877210843",
+      "longitude": "2.9061321805223015",
+      "host_location": "Houthulst Belgium",
+      "id": 32
+    },
+    {
+      "cityName": "Leudeville",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "48.56414590989399",
+      "longitude": "2.3212799402744193",
+      "host_location": "Leudeville France",
+      "id": 33
+    },
+    {
+      "cityName": "Saint-Vrain",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "48.55094986422123",
+      "longitude": "2.3200954570229775",
+      "host_location": "Saint-Vrain France",
+      "id": 34
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "latitude": "40.41967437451603",
+      "longitude": "-3.7163926167769143",
+      "host_location": "Madrid Spain",
+      "id": 35
+    },
+    {
+      "cityName": "Markaz al Waḩat ad Dakhilah",
+      "country": "Egypt",
+      "countryCode": "EG",
+      "latitude": "25.032468241984088",
+      "longitude": "29.0506658727608",
+      "host_location": "Markaz al Waḩat ad Dakhilah Egypt",
+      "id": 36
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "countryCode": "ES",
+      "latitude": "40.41836623896783",
+      "longitude": "-3.707288884057641",
+      "host_location": "Madrid Spain",
+      "id": 37
+    },
+    {
+      "cityName": "Kortemark",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "51.005579463910166",
+      "longitude": "2.9967833189931525",
+      "host_location": "Kortemark Belgium",
+      "id": 38
+    },
+    {
+      "cityName": "Kortemark",
+      "country": "Belgium",
+      "countryCode": "BE",
+      "latitude": "50.997821362493895",
+      "longitude": "2.9585395788495554",
+      "host_location": "Kortemark Belgium",
+      "id": 39
     }
   ]
 }

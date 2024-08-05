@@ -22,7 +22,7 @@ const Bookmark = () => {
           return (
             <Link
               key={item.id}
-              to={`/bookmark/${item.id}?lat=${item.latitude}&lng=${item.longitude}`}
+              to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`}
             >
               <div
                 className={`bookmarkItem ${
