@@ -9,7 +9,11 @@ const Bookmark = () => {
 
   const handleDelet = async (e, id) => {
     e.preventDefault();
-    await deletBookmark(id);
+    try {
+      await deletBookmark(id);
+    } catch (error) {
+      console.log("Error handle delet");
+    }
   };
 
   if (isLoading) return <p>loading</p>;
@@ -26,7 +30,9 @@ const Bookmark = () => {
             >
               <div
                 className={`bookmarkItem ${
-                  item.id === currentBookmark.id ? "current-bookmark" : ""
+                  currentBookmark && item.id === currentBookmark.id
+                    ? "current-bookmark"
+                    : ""
                 }`}
               >
                 <div>

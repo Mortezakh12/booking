@@ -1,3 +1,7 @@
+import { IoMdLogIn } from "react-icons/io";
+import { TiHome } from "react-icons/ti";
+import { BiHome } from "react-icons/bi";
+import { RiBookmark3Fill } from "react-icons/ri";
 import { useRef, useState } from "react";
 import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
 import { MdLocationOn } from "react-icons/md";
@@ -8,7 +12,7 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import {
   createSearchParams,
-  json,
+  Link,
   useNavigate,
   useSearchParams,
 } from "react-router-dom";
@@ -59,6 +63,15 @@ const Header = () => {
 
   return (
     <div className="header">
+      <Link to="/" className="headerSearchItem">
+        <TiHome className="headerIcon locationIcon" />
+        Home
+      </Link>
+      <Link to="/bookmark" className="headerSearchItem">
+        <RiBookmark3Fill className="headerIcon locationIcon" />
+        Bookmarks
+      </Link>
+
       <div className="headerSearch">
         <div className="headerSearchItem">
           <MdLocationOn className="headerIcon locationIcon" />
@@ -117,6 +130,11 @@ const Header = () => {
           </button>
         </div>
       </div>
+      
+      <Link to="#" className="headerSearchItem">
+        <IoMdLogIn className="headerIcon locationIcon" />
+        Login
+      </Link>
     </div>
   );
 };
